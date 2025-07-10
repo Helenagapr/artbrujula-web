@@ -25,7 +25,7 @@ function NavBar(){
 
             </ul>
         </nav>
-    )
+    );
 }
 
 export default function Header() {
@@ -38,7 +38,7 @@ export default function Header() {
             height={80}
             />
             <NavBar />
-            <h1 className={styles.title}>Art Brújula</h1>
+            <h1 className={styles.title}>Art Ggg</h1>
         </div>
     )
 }
