@@ -38,6 +38,7 @@ export default function Header() {
             height={80}
             />
             <NavBar />
+            <h1 className={styles.title}>Art Brújula</h1>
         </div>
     )
 }
