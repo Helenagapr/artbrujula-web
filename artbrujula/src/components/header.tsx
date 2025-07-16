@@ -69,8 +69,8 @@ const Header: React.FC = () => {
             <div className={styles.headerContent}>
                 <Image src="/assets/images/AF_logo_Brujula_HorizontalBlanco.png"
                     alt="Art Brújula Logo"
-                    width={220} 
-                    height={100}
+                    width={230} 
+                    height={110}
                 />
                 <div className={styles.headerRight}>
                     <div className={styles.languageSelector}>
