@@ -1,3 +1,9 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fredoka:wght@300..700&display=swap');
+
+
 .header {
     background-color: #3498db;
     padding: 15px;
@@ -9,7 +15,6 @@
     max-width: 1300px;
     margin: 0 auto;
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
@@ -41,16 +46,22 @@
     padding: 0.5rem;
 }
 
+.dropdown a{
+    font-family: "Bubblegum Sans", sans-serif;
+    font-size: 20px;
+}
+
 .dropdownMenu {
     display: none;
     position: absolute;
-    top: 100%; /* justo debajo del menú */
+    top: 130%; 
     left: 0;
     background-color: #ffffff;
     padding: 0.5rem 0;
-    min-width: 180px;
+    min-width: 250px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 100;
+    
 }
 
 .dropdownMenu li a {
@@ -58,17 +69,44 @@
     padding: 0.5rem 1rem;
     color: rgb(0, 0, 0);
     border-bottom: 1px solid #CAC4D0;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 16px;
 }
 
 .dropdownMenu li:last-child {
   border-bottom: none; 
   padding: 0.5rem 1rem;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 16px;
 }
 
 .dropdown:hover .dropdownMenu {
     display: block;
 }
 
-body {
-    margin: 0;
+.optionsContact{
+    display: flex;
+    gap: 1rem;
+}
+
+
+.navAndIcons {
+  display: flex;
+  align-items: center;
+  gap: 1rem; 
+}
+
+.headerRight {
+  display: flex;
+  flex-direction: column;
+}
+
+.languageSelector {
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
+  justify-content: end;
+  font-size: 20px;
+  font-family: "Bubblegum Sans", sans-serif;
+  color : white;
 }
