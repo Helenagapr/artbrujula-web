@@ -51,6 +51,19 @@
     font-size: 20px;
 }
 
+.dropdown a:hover{
+    color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.dropdown a:hover svg {
+    stroke: black;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
 .dropdownMenu {
     display: none;
     position: absolute;
@@ -109,4 +122,69 @@
   font-size: 20px;
   font-family: "Bubblegum Sans", sans-serif;
   color : white;
+  cursor: pointer;
 }
+
+.languageSelector span:hover {
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdownMenuDuplex {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background-color: #ffffff;
+  min-width: 300px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  position: absolute;
+  top: 130%;
+  left: 0;
+}
+
+
+.dropdown:hover .dropdownMenuDuplex {
+  display: grid; 
+}
+
+
+
+.dropdownMenuDuplex li {
+  list-style: none;
+  padding: 0.5rem 1rem;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 16px;
+}
+
+.dropdownMenuDuplex li a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 16px;
+  padding: 0;
+}
+
+
+
+.columnTitle {
+  font-weight: 500;
+  pointer-events: none;
+  padding-bottom: 1rem !important;
+}
+
+
+
+
+.dropdownMenuDuplex::before {
+  content: "";
+  position: absolute;
+  top: 0rem;
+  bottom: 0rem;
+  left: 50%;
+  width: 1px;
+  background-color: #ccc;
+  z-index: 1;
+}
+

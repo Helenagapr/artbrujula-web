@@ -2,9 +2,29 @@ import styles from '../styles/header.module.scss';
 import Image from 'next/image';
 import { Link } from 'react-router-dom';
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
+
+function LanguageSelector() {
+    const { i18n } = useTranslation();
+    
+    const changeLanguage = (lng: any) => {
+        i18n.changeLanguage(lng);
+    };
+
+    return (
+        <div className={styles.languageSelector}>
+            <span style={{ cursor: 'pointer' }} onClick={() => changeLanguage('cat')}>CAT</span>
+            <span style={{ cursor: 'pointer' }} onClick={() => changeLanguage('es')}>ESP</span>
+        </div>
+    )
+
+}
 
 function NavBar() {
+
+    const { t } = useTranslation();
+
     return (
         <nav className={styles.navbar}>
             <ul className={styles.menu}>
@@ -28,7 +48,8 @@ function NavBar() {
 
                     </a>
                     <ul className={styles.dropdownMenu}>
-                        <li><Link to="/quienes-somos">Quienes somos</Link></li>
+
+                        <li><Link to="/quienes-somos">{t("header.quienes-somos")}</Link></li>
                         <li><Link to="/contacto">Contacto</Link></li>
                         <li>¿Quieres ser voluntario?</li>
                     </ul>
@@ -50,13 +71,18 @@ function NavBar() {
                             <polyline points="6 9 12 15 18 9" />
                         </svg>
                     </a>
-                    <ul className={styles.dropdownMenu}>
-                        <li><a href="/services">Servicios</a></li>
-                        <li><a href="/events">Eventos</a></li>
-                        <li><a href="/exhibitions">Exposiciones</a></li>
+                    
+                    <ul className={styles.dropdownMenuDuplex}>
+                        <li className={styles.columnTitle}>Programación</li>
+                        <li className={styles.columnTitle}>Actividades</li>
+                        <li><a href="/calendario">Calendario</a></li>
+                        <li><a href="/talleres">Talleres</a></li>
+                        <li><a href="/ultimas-actividades">Ultimas actividades</a></li>
+                        <li><a href="/eventos">Eventos</a></li>
                     </ul>
+
                 </li>
-                <li className={styles.dropdown}><a href="/galery">Galeria</a></li>
+                <li className={styles.dropdown}><a href="/galeria">Galeria</a></li>
             </ul>
         </nav>
     );
@@ -73,14 +99,13 @@ const Header: React.FC = () => {
                     height={110}
                 />
                 <div className={styles.headerRight}>
-                    <div className={styles.languageSelector}>
-                        <span>CAT</span>
-                        <span>ESP</span>
-                    </div>
+                    <LanguageSelector />
                     <div className={styles.navAndIcons}>
                         <NavBar />
                         <div className={styles.optionsContact}>
-                            <FaInstagram size={28} color="#fff" />
+                            <a href="https://www.instagram.com/artbrujula.stboi" target="_blank" rel="noopener noreferrer">
+                                <FaInstagram size={28} color="#fff"/>
+                            </a>
                             <FaWhatsapp size={28} color="#ffffffff" />
                         </div>  
                     </div>
