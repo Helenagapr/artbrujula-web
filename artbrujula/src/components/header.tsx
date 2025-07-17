@@ -50,12 +50,12 @@ function NavBar() {
                     <ul className={styles.dropdownMenu}>
 
                         <li><Link to="/quienes-somos">{t("header.quienes-somos")}</Link></li>
-                        <li><Link to="/contacto">Contacto</Link></li>
-                        <li>¿Quieres ser voluntario?</li>
+                        <li><Link to="/contacto">{t("header.contacto")}</Link></li>
+                        <li>{t("header.voluntario")}</li>
                     </ul>
                 </li>
                 <li className={styles.dropdown}>
-                    <a>¿Qué ofrecemos?
+                    <a>{t("header.que-ofrecemos")}
                         <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="18"
@@ -73,16 +73,16 @@ function NavBar() {
                     </a>
                     
                     <ul className={styles.dropdownMenuDuplex}>
-                        <li className={styles.columnTitle}>Programación</li>
-                        <li className={styles.columnTitle}>Actividades</li>
-                        <li><a href="/calendario">Calendario</a></li>
-                        <li><a href="/talleres">Talleres</a></li>
-                        <li><a href="/ultimas-actividades">Ultimas actividades</a></li>
-                        <li><a href="/eventos">Eventos</a></li>
+                        <li className={styles.columnTitle}>{t("header.programacion")}</li>
+                        <li className={styles.columnTitle}>{t("header.actividades")}</li>
+                        <li><a href="/calendario">{t("header.calendario")}</a></li>
+                        <li><a href="/talleres">{t("header.talleres")}</a></li>
+                        <li><a href="/ultimas-actividades">{t("header.ultimas-actividades")}</a></li>
+                        <li><a href="/eventos">{t("header.eventos")}</a></li>
                     </ul>
 
                 </li>
-                <li className={styles.dropdown}><a href="/galeria">Galeria</a></li>
+                <li className={styles.dropdown}><a href="/galeria">{t("header.galery")}</a></li>
             </ul>
         </nav>
     );
@@ -106,7 +106,10 @@ const Header: React.FC = () => {
                             <a href="https://www.instagram.com/artbrujula.stboi" target="_blank" rel="noopener noreferrer">
                                 <FaInstagram size={28} color="#fff"/>
                             </a>
-                            <FaWhatsapp size={28} color="#ffffffff" />
+                            <a href='https://api.whatsapp.com/send?phone=34614130355' target="_blank" rel="noopener noreferrer">
+                                <FaWhatsapp size={28} color="#fff"/>
+                            </a>
+                          
                         </div>  
                     </div>
                 </div>
