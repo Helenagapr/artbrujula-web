@@ -3,6 +3,7 @@ import Header from "../components/header";
 import { AppRouter } from "../routes/AppRouter";
 import { BrowserRouter } from "react-router-dom";
 import style from '../styles/global.module.scss'; 
+import WhatsAppButton from "../components/chat";
 
 export default function App(){
     return (
@@ -13,6 +14,7 @@ export default function App(){
                     <main className={style.container}>
                         <AppRouter />
                     </main>
+                    <WhatsAppButton />
                 </BrowserRouter>  
             </Suspense> 
         </>
