@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import styles from '../styles/chat.module.scss';
 import Image from 'next/image';
+import { DismissCircle24Filled  } from '@fluentui/react-icons';
+
+
 
 
 const WhatsAppButton = () => {
 
     const [open, setOpen] = useState(false);
+    const [hovered, setHovered] = useState(false);
+
 
     const handleClick = () => {
         setOpen(true);
@@ -32,12 +37,41 @@ const WhatsAppButton = () => {
                     <div className={styles.header}>
                         <Image src="/assets/images/AF_logo_Brujula_HorizontalBlanco.png"
                             alt="Art Brújula Logo"
-                            width={50} 
-                            height={50}
+                            width={110} 
+                            height={60}
                         />
+                        <div className={styles.closeButton}
+                            onMouseEnter={() => setHovered(true)}
+                            onMouseLeave={() => setHovered(false)}
+                            onClick={() => setOpen(false)}>
+                            <DismissCircle24Filled  
+                                style={{ 
+                                    color: hovered ? 'rgba(0, 0, 0, 0.5)' : '#ffffffff', 
+                                    fontSize: '40px', 
+                                    width: '40px',
+                                    height: '40px', 
+                                    cursor: 'pointer'}} 
+                            />
+                        </div>    
                     </div>
                     <div>
-
+                                                
+                        <div
+                            style={{
+                                maxWidth: '60%',
+                                backgroundColor: '#dcf8c6', // color típico de mensaje enviado
+                                color: '#000',
+                                padding: '10px 14px',
+                                borderRadius: '16px 16px 16px 0px',
+                                alignSelf: 'flex-end',
+                                margin: '8px 0',
+                                fontSize: '14px',
+                                boxShadow: '0 1px 2px rgba(0,0,0,0.1)',
+                            }}
+                            >
+                            ¡Hola! Este es un mensaje de prueba.
+                        </div>
+            
                     </div>
                 </div>
             )}
