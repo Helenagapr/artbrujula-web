@@ -1,0 +1,53 @@
+.whatsappButton {
+    background-color: #25D366; 
+    border: none;
+    border-radius: 50%;
+    padding: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 1000;
+
+}
+
+.whatsappButton:hover {
+    background-color: #1ebe5d; 
+}
+
+.whatsappButton svg {
+    display: block;
+}
+
+.container {
+    border-radius: 25px;
+    border: none;
+    background-color: #ecf0f1;
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 405px;
+    height: 240px;
+}
+
+.header {
+    background-color: #3498db;
+    width: 390px;
+    height: 62px;
+    border-radius: 25px 25px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem;
+    justify-content: space-between;
+}
+
+.closeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+}

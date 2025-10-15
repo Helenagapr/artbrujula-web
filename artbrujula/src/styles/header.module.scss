@@ -1,0 +1,190 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fredoka:wght@300..700&display=swap');
+
+
+.header {
+    background-color: #3498db;
+    padding: 15px;
+    width: 100%;
+    height: 120px;
+}
+
+.headerContent {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.navbar {
+    padding: 1rem;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    position: relative;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.dropdown a{
+    font-family: "Bubblegum Sans", sans-serif;
+    font-size: 20px;
+}
+
+.dropdown a:hover{
+    color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.dropdown a:hover svg {
+    stroke: black;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+.dropdownMenu {
+    display: none;
+    position: absolute;
+    top: 130%; 
+    left: 0;
+    background-color: #ffffff;
+    padding: 0.5rem 0;
+    min-width: 250px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    
+}
+
+.dropdownMenu li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: rgb(0, 0, 0);
+    border-bottom: 1px solid #CAC4D0;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 16px;
+}
+
+.dropdownMenu li:last-child {
+  border-bottom: none; 
+  padding: 0.5rem 1rem;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 16px;
+}
+
+.dropdown:hover .dropdownMenu {
+    display: block;
+}
+
+.optionsContact{
+    display: flex;
+    gap: 1rem;
+}
+
+
+.navAndIcons {
+  display: flex;
+  align-items: center;
+  gap: 1rem; 
+}
+
+.headerRight {
+  display: flex;
+  flex-direction: column;
+}
+
+.languageSelector {
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
+  justify-content: end;
+  font-size: 20px;
+  font-family: "Bubblegum Sans", sans-serif;
+  color : white;
+  cursor: pointer;
+}
+
+.languageSelector span:hover {
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdownMenuDuplex {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background-color: #ffffff;
+  min-width: 300px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  position: absolute;
+  top: 130%;
+  left: 0;
+}
+
+
+.dropdown:hover .dropdownMenuDuplex {
+  display: grid; 
+}
+
+
+
+.dropdownMenuDuplex li {
+  list-style: none;
+  padding: 0.5rem 1rem;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 16px;
+}
+
+.dropdownMenuDuplex li a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 16px;
+  padding: 0;
+}
+
+
+
+.columnTitle {
+  font-weight: 500;
+  pointer-events: none;
+  padding-bottom: 1rem !important;
+}
+
+
+
+
+.dropdownMenuDuplex::before {
+  content: "";
+  position: absolute;
+  top: 0rem;
+  bottom: 0rem;
+  left: 50%;
+  width: 1px;
+  background-color: #ccc;
+  z-index: 1;
+}
+
