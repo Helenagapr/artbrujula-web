@@ -3,6 +3,7 @@ import Header from "../Header/Header";
 import styles from "../../styles/global.module.scss";
 import WhatsAppButton from "../ChatComponent/ChatComponent";
 
+
 const Layout: React.FC = () => {
   return (
     <>

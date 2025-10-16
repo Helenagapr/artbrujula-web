@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./ChatComponent.module.scss";
 import { DismissCircle24Filled } from "@fluentui/react-icons";
+import logo from '../../assets/images/AF_logo_Brujula_HorizontalBlanco.png';
 
 const WhatsAppButton = () => {
   const [open, setOpen] = useState(false);
@@ -34,7 +35,7 @@ const WhatsAppButton = () => {
         <div className={styles.container}>
           <div className={styles.header}>
             <img
-              src="/assets/images/AF_logo_Brujula_HorizontalBlanco.png"
+              src={logo}
               alt="Art Brújula Logo"
               width={110}
               height={60}

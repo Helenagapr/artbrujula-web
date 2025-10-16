@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { useLanguageSelector } from './Header.helpers';
 import { useTranslation } from 'react-i18next';
+import logo from '../../assets/images/AF_logo_Brujula_HorizontalBlanco.png';
 
 function LanguageSelector() {
     const { changeLanguage } = useLanguageSelector();
     return (
         <div className={styles.languageSelector}>
-            <span style={{ cursor: 'pointer' }} onClick={() => changeLanguage('cat')}>CAT</span>
+            <span style={{ cursor: 'pointer' }} onClick={() => changeLanguage('ca')}>CAT</span>
             <span style={{ cursor: 'pointer' }} onClick={() => changeLanguage('es')}>ESP</span>
         </div>
     );
@@ -79,7 +80,7 @@ const Header: React.FC = () => {
         <div className={styles.header}>
             <div className={styles.headerContent}>
                 <img
-                    src="/assets/images/AF_logo_Brujula_HorizontalBlanco.png"
+                    src={logo}
                     alt="Art Brújula Logo"
                     width={230}
                     height={110}

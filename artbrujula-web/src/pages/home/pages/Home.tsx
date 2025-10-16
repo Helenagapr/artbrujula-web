@@ -1,9 +1,16 @@
+import CustomCarousel from "../components/CustomCarousel/CustomCarousel";
+import images from "src/shared/data/images";
 
-export default function Home(){
-    return (
-        <div>
-            <h1>Welcome to Art Brújula</h1>
-            <p>Your journey into the world of art begins here.</p>
-        </div>
-    );
+export default function Home() {
+  return (
+    <>
+      <CustomCarousel>
+        {images.map((image, index) => (
+          <div key={index}>
+            <img src={image.imgURL} alt={image.imgAlt} />
+          </div>
+        ))}
+      </CustomCarousel>
+    </>
+  );
 }
