@@ -1,0 +1,15 @@
+{
+    "header": {
+        "who": "Quiénes somos",
+        "contact": "Contacto",
+        "volunteer": "¿Quieres ser voluntario?",
+        "offer": "¿Qué ofrecemos?",
+        "program": "Programación",
+        "calendar": "Calendario",
+        "activities": "Actividades",
+        "old-activities": "Últimas actividades",
+        "gallery": "Galería",
+        "events": "Eventos",
+        "courses": "Talleres"
+    }
+}
